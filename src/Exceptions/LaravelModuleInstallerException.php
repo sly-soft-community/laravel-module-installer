@@ -1,6 +1,6 @@
 <?php
 
-namespace Joshbrw\LaravelModuleInstaller\Exceptions;
+namespace SlySoft\LaravelModuleInstaller\Exceptions;
 
 use Exception;
 

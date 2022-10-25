@@ -1,14 +1,14 @@
 {
-    "name": "joshbrw/laravel-module-installer",
+    "name": "sly-soft-community/laravel-module-installer",
     "type": "composer-plugin",
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Joshbrw\\LaravelModuleInstaller\\": "src/"
+            "SlySoft\\LaravelModuleInstaller\\": "src/"
         }
     },
     "extra": {
-        "class": "Joshbrw\\LaravelModuleInstaller\\LaravelModuleInstallerPlugin"
+        "class": "SlySoft\\LaravelModuleInstaller\\LaravelModuleInstallerPlugin"
     },
     "require-dev": {
         "composer/composer": "^2.0",

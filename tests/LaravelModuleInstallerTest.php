@@ -5,8 +5,8 @@ use PHPUnit\Framework\TestCase;
 use Composer\Composer;
 use Composer\IO\IOInterface;
 use Composer\Package\PackageInterface;
-use Joshbrw\LaravelModuleInstaller\Exceptions\LaravelModuleInstallerException;
-use Joshbrw\LaravelModuleInstaller\LaravelModuleInstaller;
+use SlySoft\LaravelModuleInstaller\Exceptions\LaravelModuleInstallerException;
+use SlySoft\LaravelModuleInstaller\LaravelModuleInstaller;
 
 class LaravelModuleInstallerTest extends TestCase
 {
@@ -118,7 +118,7 @@ class LaravelModuleInstallerTest extends TestCase
      */
     public function it_can_use_custom_path(): void
     {
-        $package = $this->getMockPackage('vendor/name-module');
+        $package = $this->getMockPackage('vendor/laravel-name-module');
 
         $this->composer->shouldReceive('getExtra')
             ->andReturn(['module-dir' => 'Custom'])

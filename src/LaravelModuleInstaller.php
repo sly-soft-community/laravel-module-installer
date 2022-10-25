@@ -1,10 +1,10 @@
 <?php
 
-namespace Joshbrw\LaravelModuleInstaller;
+namespace SlySoft\LaravelModuleInstaller;
 
 use Composer\Package\PackageInterface;
 use Composer\Installer\LibraryInstaller;
-use Joshbrw\LaravelModuleInstaller\Exceptions\LaravelModuleInstallerException;
+use SlySoft\LaravelModuleInstaller\Exceptions\LaravelModuleInstallerException;
 
 class LaravelModuleInstaller extends LibraryInstaller
 {
@@ -63,9 +63,15 @@ class LaravelModuleInstaller extends LibraryInstaller
             throw LaravelModuleInstallerException::fromInvalidPackage($name);
         }
 
+        if ($splitNameToUse[0] === 'laravel') {
+            array_shift($splitNameToUse);
+        }
+
         if (array_pop($splitNameToUse) !== 'module') {
             throw LaravelModuleInstallerException::fromInvalidPackage($name);
         }
+
+        print_r($splitNameToUse);
 
         return implode('', array_map('ucfirst', $splitNameToUse));
     }
